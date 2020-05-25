@@ -14,6 +14,8 @@
 		00370AE82200CA3B000531F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00370AE62200CA3B000531F8 /* LaunchScreen.storyboard */; };
 		00370AF32200CA3B000531F8 /* ApplePieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00370AF22200CA3B000531F8 /* ApplePieTests.swift */; };
 		00370AFE2200CA3C000531F8 /* ApplePieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00370AFD2200CA3C000531F8 /* ApplePieUITests.swift */; };
+		00E1E7802206215E00FBBCDF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E1E77F2206215E00FBBCDF /* ResultViewController.swift */; };
+		00F245862203249C00805CD1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F245852203249C00805CD1 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		00370AF92200CA3C000531F8 /* ApplePieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplePieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00370AFD2200CA3C000531F8 /* ApplePieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePieUITests.swift; sourceTree = "<group>"; };
 		00370AFF2200CA3C000531F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E1E77F2206215E00FBBCDF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		00F245852203249C00805CD1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				00370ADD2200CA3A000531F8 /* AppDelegate.swift */,
+				00F245852203249C00805CD1 /* Game.swift */,
 				00370ADF2200CA3A000531F8 /* ViewController.swift */,
+				00E1E77F2206215E00FBBCDF /* ResultViewController.swift */,
 				00370AE12200CA3A000531F8 /* Main.storyboard */,
 				00370AE42200CA3B000531F8 /* Assets.xcassets */,
 				00370AE62200CA3B000531F8 /* LaunchScreen.storyboard */,
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					00370AD92200CA3A000531F8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 					};
 					00370AED2200CA3B000531F8 = {
 						CreatedOnToolsVersion = 10.1;
@@ -257,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				00370AE02200CA3A000531F8 /* ViewController.swift in Sources */,
+				00F245862203249C00805CD1 /* Game.swift in Sources */,
 				00370ADE2200CA3A000531F8 /* AppDelegate.swift in Sources */,
+				00E1E7802206215E00FBBCDF /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,17 +441,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V2XV9SF2Z6;
 				INFOPLIST_FILE = ApplePie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Donat.ApplePie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Donat2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,17 +462,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V2XV9SF2Z6;
 				INFOPLIST_FILE = ApplePie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Donat.ApplePie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Donat2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
