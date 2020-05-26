@@ -16,7 +16,7 @@ class ResultViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultLabel.text = "Your score is : \(totalWins*10) "
+        resultLabel.text = "Your score is : \(totalWins * 10) "
     }
     
     @IBAction func startNewGame(_ sender: UIButton) {

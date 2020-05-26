@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     var currentGame : Game!
-    var listofwords : [String] = ["miami", "orlando", "chicago", "newyork", "losangeles", "sandiego", "seattle", "boston", "lasvegas", "philadelphia"]
+    var listofwords : [String] = ["test", "chicago" , "orlando"]
     let incorrectMovesAllowed = 7 // How many incrorrect guesses are allowed per round
-    var totalWins = 0 {   //varailbleim degisir degismez yeni bir rounda basla
+    var totalWins = 0 {
         didSet {
             newRound()
         }
@@ -31,8 +31,8 @@ class ViewController: UIViewController {
 
     @IBAction func buttonTapped(_ sender: UIButton) {
         sender.isEnabled = false
-        let letterString  = sender.title(for: .normal)!  //basilan harfin kullanimi
-        let guessedLetter = Character(letterString.lowercased()) // secilen harfi lowercase e cevirdik
+        let letterString  = sender.title(for: .normal)!
+        let guessedLetter = Character(letterString.lowercased())
         currentGame.playerGuessed(letter: guessedLetter)
         updateGameState()
     }
@@ -40,6 +40,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         newRound()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.listofwords = ["test", "chicago" , "orlando", "miami", "lasvegas", "losangeles", "seattle", "boston", "newyork", "washington", "philadelphia"]
+        totalLoses = 0
+        totalWins = 0
     }
     
     func newRound() {
@@ -68,9 +75,6 @@ class ViewController: UIViewController {
         correctWordLabel.text = wordWithSpacing
         scoreLabel.text = "Wins: \(totalWins) Loses: \(totalLoses)"
         treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
-        
-        
-     
     }
     
     func updateGameState(){
@@ -86,8 +90,9 @@ class ViewController: UIViewController {
     func goToResult() {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let wins : ResultViewController = mainStoryboard.instantiateViewController(withIdentifier: "ResultVC") as! ResultViewController
+        wins.modalPresentationStyle = .fullScreen
         wins.totalWins = totalWins
-        self.present(wins, animated: true, completion: nil) //gecis kodu
+        self.present(wins, animated: true, completion: nil)
     }
 }
 
